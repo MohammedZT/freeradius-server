@@ -9,6 +9,19 @@ RUN rpmkeys --import /etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
 RUN yum groupinstall -y "Development Tools"
 RUN yum install -y rpmdevtools openssl dnf-utils
 
+RUN echo $'[mariadb]\n\
+name = MariaDB\n\
+baseurl = http://yum.mariadb.org/10.6/rhel8-amd64\n\
+module_hotfixes=1\n\
+gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB\n\
+gpgcheck=1\n\
+enabled=1'\
+> /etc/yum.repos.d/MariaDB.repo
+RUN rpm --import  https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+RUN yum install -y mariadb-devel
+
+
+
 #
 #  Create build directory
 #
