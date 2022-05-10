@@ -222,7 +222,7 @@ Summary: MySQL support for FreeRADIUS
 Group: System Environment/Daemons
 Requires: %{name} = %{version}-%{release}
 Requires: mysql
-BuildRequires: mysql-devel
+BuildRequires: mariadb-devel
 
 %description mysql
 This plugin provides MySQL support for the FreeRADIUS server project.
