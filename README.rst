@@ -9,7 +9,7 @@ The FreeRADIUS server
 Introduction
 ------------
 
-The FreeRADIUS Server Project is a high performance and highly
+The FreeRADIUS Server Projects is a high performance and highly
 configurable multi-protocol policy server, supporting RADIUS, DHCPv4
 and VMPS. It is available under the terms of the GNU GPLv2.
 Using RADIUS allows authentication and authorization for a network
